@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600&family=Lemon&family=Patua+One&family=Poppins:wght@200;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="{{ asset('css/index.style.blade.css') }}">
-    <title>food website</title>
+    <title>Recipe Web: Lutong Pinoy!</title>
 </head>
 <body>
+    <!-- Navbar -->
     <nav>
         <div class="wrapper">
             <div class="nav-container">
@@ -91,43 +93,44 @@
 
     <!-- Sample foods -->
     <section class="details-foods">
-    <div class="title"><h1 data-aos="fade-left" data-aos-duration="1000">Enjoy Some of the Most Beloved Filipino Dishes</h1></div>
-    <div class="foods">
-        <div class="card" data-aos="fade-up" data-aos-duration="1000">
-            <img src="{{ asset('img/Adobo.png') }}" alt="Adobo">
-            <div class="discription">
-                <h1>Adobo</h1>
-                <p>A classic Filipino dish made with meat marinated in vinegar, soy sauce, garlic, and spices. <br>
-                <strong>Health Benefits:</strong> Vinegar aids digestion, garlic supports heart health, and protein-rich meat helps build muscles.</p>
+        <div class="title"><h1 data-aos="fade-left" data-aos-duration="1000">Enjoy Some of the Most Beloved Filipino Dishes</h1></div>
+        <div class="foods">
+            <div class="card" data-aos="fade-up" data-aos-duration="1000">
+                <img src="{{ asset('img/Adobo.png') }}" alt="Adobo">
+                <div class="discription">
+                    <h1>Adobo</h1>
+                    <p>A classic Filipino dish made with meat marinated in vinegar, soy sauce, garlic, and spices. <br>
+                    <strong>Health Benefits:</strong> Vinegar aids digestion, garlic supports heart health, and protein-rich meat helps build muscles.</p>
+                </div>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <img src="{{ asset('img/Sinigang.png') }}" alt="Sinigang">
+                <div class="discription">
+                    <h1>Sinigang</h1>
+                    <p>A tangy and savory soup made with tamarind, vegetables, and meat or seafood. <br>
+                    <strong>Health Benefits:</strong> Rich in vitamin C, fiber, and antioxidants, Sinigang boosts immunity and aids digestion.</p>
+                </div>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                <img src="{{ asset('img/Karekare.png') }}" alt="Kare-Kare">
+                <div class="discription">
+                    <h1>Kare-Kare</h1>
+                    <p>A rich peanut stew with oxtail, tripe, and vegetables, often served with bagoong. <br>
+                    <strong>Health Benefits:</strong> Peanuts provide healthy fats and protein, while vegetables supply fiber and vitamins.</p>
+                </div>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                <img src="{{ asset('img/Halohalo.png') }}" alt="Halo-Halo">
+                <div class="discription">
+                    <h1>Halo-Halo</h1>
+                    <p>A colorful dessert with shaved ice, fruits, jellies, and milk. <br>
+                    <strong>Health Benefits:</strong> Ube is rich in antioxidants, fruits provide vitamins, and dairy offers calcium.</p>
+                </div>
             </div>
         </div>
-        <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-            <img src="{{ asset('img/Sinigang.png') }}" alt="Sinigang">
-            <div class="discription">
-                <h1>Sinigang</h1>
-                <p>A tangy and savory soup made with tamarind, vegetables, and meat or seafood. <br>
-                <strong>Health Benefits:</strong> Rich in vitamin C, fiber, and antioxidants, Sinigang boosts immunity and aids digestion.</p>
-            </div>
-        </div>
-        <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-            <img src="{{ asset('img/Karekare.png') }}" alt="Kare-Kare">
-            <div class="discription">
-                <h1>Kare-Kare</h1>
-                <p>A rich peanut stew with oxtail, tripe, and vegetables, often served with bagoong. <br>
-                <strong>Health Benefits:</strong> Peanuts provide healthy fats and protein, while vegetables supply fiber and vitamins.</p>
-            </div>
-        </div>
-        <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-            <img src="{{ asset('img/Halohalo.png') }}" alt="Halo-Halo">
-            <div class="discription">
-                <h1>Halo-Halo</h1>
-                <p>A colorful dessert with shaved ice, fruits, jellies, and milk. <br>
-                <strong>Health Benefits:</strong> Ube is rich in antioxidants, fruits provide vitamins, and dairy offers calcium.</p>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
+    <!-- Scripts -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="{{ asset('js/index.script.blade.js') }}"></script>
 

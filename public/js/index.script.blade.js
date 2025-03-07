@@ -1,34 +1,34 @@
-document.getElementById("ingredientInput").addEventListener("input", function() {
-    let query = this.value.trim();
-    const suggestionsList = document.getElementById("ingredientSuggestions");
-    
-    // Hide suggestions if input is empty or less than 2 characters
-    if (query.length < 2) {
-        suggestionsList.style.display = 'none';
-        return;
-    }
+    document.getElementById("ingredientInput").addEventListener("input", function() {
+        let query = this.value.trim();
+        const suggestionsList = document.getElementById("ingredientSuggestions");
+        
+        // Hide suggestions if input is empty or less than 2 characters
+        if (query.length < 2) {
+            suggestionsList.style.display = 'none';
+            return;
+        }
 
-    fetchIngredientSuggestions(query);
-});
+        fetchIngredientSuggestions(query);
+    });
 
-function fetchIngredientSuggestions(query) {
-    fetch(`/ingredient-suggestions?query=${query}`)
-        .then(response => response.json())
-        .then(data => {
-            displaySuggestions(data);
+    function fetchIngredientSuggestions(query) {
+        fetch(`/ingredient-suggestions?query=${query}`)
+            .then(response => response.json())
+            .then(data => {
+                displaySuggestions(data);
         })
         .catch(error => console.error("Error:", error));
-}
-
-function displaySuggestions(suggestions) {
-    const suggestionsList = document.getElementById("ingredientSuggestions");
-    suggestionsList.innerHTML = "";
-    
-    // Hide if suggestion box is empty
-    if (suggestions.length === 0) {
-        suggestionsList.style.display = 'none';
-        return;
     }
+
+    function displaySuggestions(suggestions) {
+        const suggestionsList = document.getElementById("ingredientSuggestions");
+        suggestionsList.innerHTML = "";
+        
+        // Hide if suggestion box is empty
+        if (suggestions.length === 0) {
+            suggestionsList.style.display = 'none';
+            return;
+        }
 
     // Show suggestions if we have a matching ingredient
     suggestionsList.style.display = 'block';
@@ -46,8 +46,8 @@ function displaySuggestions(suggestions) {
             suggestionsList.style.display = 'none';
         };
         suggestionsList.appendChild(li);
-    });
-}
+        });
+    }
 
     // Hide suggestions when clicking outside
     document.addEventListener('click', function(e) {
@@ -57,7 +57,7 @@ function displaySuggestions(suggestions) {
         if (!ingredientInput.contains(e.target) && !suggestionsList.contains(e.target)) {
             suggestionsList.style.display = 'none';
         }
-    });
+        });
 
     function addIngredient() {
         let inputField = document.getElementById("ingredientInput");
