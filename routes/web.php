@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IngredientController;
+use App\Http\Controllers\SearchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +23,4 @@ Route::get('/', function () {
     return view('index');
 });
 Route::get('/ingredient-suggestions', [IngredientController::class, 'getIngredientSuggestions'])->name('ingredient.suggestions');
+Route::get('/search-suggestions', [SearchController::class, 'search'])->name('search.suggestions');

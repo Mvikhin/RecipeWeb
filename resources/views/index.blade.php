@@ -21,8 +21,9 @@
                     <a href="">Specials</a>
                 </div>
                 <div class="search">
-                    <input type="search" placeholder="search foods">
+                    <input type="search" id="searchInput" placeholder="search foods" autocomplete="off">
                     <i class="fa-solid fa-magnifying-glass"></i>
+                    <div id="searchSuggestions" class="search-suggestions"></div>
                 </div>
             </div>
         </div>
@@ -62,8 +63,11 @@
                         <div class="d-flex flex-column h-100">
                             <h2 class="text-dark">Enter Ingredient</h2>
                             <div class="ingredient-input-container flex-grow-1">
-                                <input type="text" id="ingredientInput" class="form-control mb-3 w-100" placeholder="Enter an ingredient...">
-                                <ul id="ingredientSuggestions" class="suggestions-list"></ul>
+                                <div class="search-box">
+                                    <input type="text" id="ingredientInput" class="form-control" placeholder="Enter an ingredient...">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    <div id="ingredientSuggestions" class="search-suggestions"></div>
+                                </div>
                             </div>
                             <button type="button" class="btn btn-dark w-100 mt-auto" onclick="addIngredient()">Add Ingredient</button>
                         </div>
@@ -85,6 +89,7 @@
         </div>
     </section>
 
+    <!-- Sample foods -->
     <section class="details-foods">
     <div class="title"><h1 data-aos="fade-left" data-aos-duration="1000">Enjoy Some of the Most Beloved Filipino Dishes</h1></div>
     <div class="foods">
@@ -123,83 +128,8 @@
     </div>
 </section>
 
-    <script>
-        document.getElementById("ingredientInput").addEventListener("input", function() {
-            let query = this.value;
-            if (query.length >= 2) {
-                fetchIngredientSuggestions(query);
-            } else {
-                clearSuggestions();
-            }
-        });
-
-        function fetchIngredientSuggestions(query) {
-            fetch(`/ingredient-suggestions?query=${query}`)
-                .then(response => response.json())
-                .then(data => {
-                    displaySuggestions(data);
-                })
-                .catch(error => console.error("Error:", error));
-        }
-
-        function displaySuggestions(suggestions) {
-            const suggestionsList = document.getElementById("ingredientSuggestions");
-            suggestionsList.innerHTML = "";
-
-            suggestions.forEach(ingredient => {
-                let li = document.createElement("li");
-                li.classList.add("suggestion-item");
-                li.textContent = ingredient.name;
-                li.onclick = function() {
-                    document.getElementById("ingredientInput").value = ingredient.name;
-                    clearSuggestions();
-                };
-                suggestionsList.appendChild(li);
-            });
-        }
-
-        function clearSuggestions() {
-            document.getElementById("ingredientSuggestions").innerHTML = "";
-        }
-
-        function addIngredient() {
-            let inputField = document.getElementById("ingredientInput");
-            let ingredient = inputField.value.trim();
-            let list = document.getElementById("ingredientList");
-
-            if (ingredient === "") {
-                alert("Please enter a valid ingredient!");
-                return;
-            }
-
-            let existingItems = list.getElementsByTagName("li");
-            for (let item of existingItems) {
-                if (item.textContent === ingredient) {
-                    alert("Ingredient already added!");
-                    return;
-                }
-            }
-
-            let li = document.createElement("li");
-            li.className = "list-group-item d-flex justify-content-between align-items-center";
-            li.textContent = ingredient;
-
-            let removeBtn = document.createElement("button");
-            removeBtn.className = "btn btn-dark btn-sm";
-            removeBtn.innerHTML = '<i class="fas fa-times"></i>';
-            removeBtn.onclick = function () {
-                list.removeChild(li);
-            };
-
-            li.appendChild(removeBtn);
-            list.appendChild(li);
-            inputField.value = "";
-        }
-    </script>
-
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+    <script src="{{ asset('js/index.script.blade.js') }}"></script>
+
 </body>
 </html>
