@@ -10,6 +10,8 @@
     <title>food website</title>
 </head>
 <body>
+
+    <!-- Navbar -->
     <nav>
         <div class="wrapper">
             <div class="nav-container">
@@ -126,8 +128,9 @@
             </div>
         </div>
     </div>
-</section>
+    </section>
 
+    <!-- Scripts -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="{{ asset('js/index.script.blade.js') }}"></script>
 

@@ -4,6 +4,7 @@
     padding: 0;
     margin: 0;
     font-family: 'Poppins', sans-serif;
+    font-weight: bold;
     box-sizing: border-box;
 }
 
@@ -85,7 +86,10 @@ nav .nav-container .search input::placeholder {
     color: #666;
 }
 
+
+/* Search Function */
 nav .nav-container .search-suggestions {
+    display: none;
     position: absolute;
     top: 100%;
     left: 0;
@@ -236,8 +240,8 @@ section {
     text-align: center;
 }
 
-/* Food Details */
 
+/* Food Details */
 .details-foods{
     background-color: black;
 }
@@ -267,6 +271,7 @@ section {
     cursor: pointer;
     border-radius: 10px;
     box-shadow: 1px 1px 10px white;
+    background-color: #000;
     display: flex;
     flex-direction: column;
     justify-content: center;
