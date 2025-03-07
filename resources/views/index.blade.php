@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{ asset('css/index.style.blade.css') }}">
     <title>Recipe Web: Lutong Pinoy!</title>
 </head>
-<body>
+<body>      
     <!-- Navbar -->
     <nav>
         <div class="wrapper">
@@ -23,7 +23,7 @@
                     <a href="">Specials</a>
                 </div>
                 <div class="search">
-                    <input type="search" id="searchInput" placeholder="search foods" autocomplete="off">
+                    <input type="search" id="searchInput" placeholder="Look for delicacies" autocomplete="off">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <div id="searchSuggestions" class="search-suggestions"></div>
                 </div>
