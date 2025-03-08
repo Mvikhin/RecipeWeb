@@ -130,6 +130,47 @@
     </div>
     </section>
 
+    <!-- profiles -->
+        <div>
+        <h1 class="text-center mb-4">Meet the Devs</h1>
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-4 g-4">
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://scontent.fmnl8-2.fna.fbcdn.net/v/t39.30808-6/481205220_2445158115824408_113200709728376558_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=B7ioz-HT9LsQ7kNvgFLF5BD&_nc_oc=AdgEfCLVmak0FPmfWbO08UuWXiAeXgpI0Wq84TjFSMaFkuNHfAZ94T-oV2hE5b3udPk&_nc_zt=23&_nc_ht=scontent.fmnl8-2.fna&_nc_gid=Aowv2OAMAjTfNWb14tMShuj&oh=00_AYHHBPW3hMCcGmqAoF1SgeBD99yEwd7zRfkcp2rm2mWjrA&oe=67D1D009" class="card-img-top" alt="John Kenneth De Guzman">
+                        <div class="card-body">
+                            <p class="card-text">John Kenneth De Guzman</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://scontent.fmnl8-2.fna.fbcdn.net/v/t39.30808-6/477447071_1164311361854018_4026112173144777272_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Xu9LgctolQEQ7kNvgHn9mh2&_nc_oc=AdiRH8dTr8_F1VR2XFjacn5igBSiuHIctN_1IZg1PCMtpTcvhAqjVKLQ0vJjUeaQmNQ&_nc_zt=23&_nc_ht=scontent.fmnl8-2.fna&_nc_gid=APC2Js31dOF07OMmRCUMGmB&oh=00_AYGUQjq87lIyfqA-OH7jayWKxyfEW2JVxI-P7lU9HJ1RBA&oe=67D1B104" class="card-img-top" alt="Gerald Conde">
+                        <div class="card-body">
+                            <p class="card-text">Gerald Conde</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://scontent.fmnl8-1.fna.fbcdn.net/v/t39.30808-1/480291685_3875003362829280_3152699232265031440_n.jpg?stp=c0.0.720.720a_dst-jpg_s200x200_tt6&_nc_cat=108&ccb=1-7&_nc_sid=e99d92&_nc_ohc=9r2W5OKy768Q7kNvgGnlZ9H&_nc_oc=Adh0RgoG3i-gqVxRw9aycZ0we5HrXx757ou7jWgPYvsPRa7N7OtEswy_EHpPDXxUBsI&_nc_zt=24&_nc_ht=scontent.fmnl8-1.fna&_nc_gid=AZE7_0tM20_kkuktAR6GHhV&oh=00_AYFV6PvuayzvTs4Byh3zA3-afcKzXBvyhbm9G9AYoxaFhg&oe=67D1C7DB" class="card-img-top" alt="Elijah Jette Valencia">
+                        <div class="card-body">
+                            <p class="card-text">Elijah Jette Valencia</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://scontent.fmnl8-6.fna.fbcdn.net/v/t39.30808-1/471192219_4040552886173258_8649644729753738593_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=100&ccb=1-7&_nc_sid=e99d92&_nc_ohc=j3ELo1EjdeAQ7kNvgE3zFt3&_nc_oc=AdisJhUeK0g_TRZZGp0riB7w4nyCNmsWAsMf6Wb4bLQzaObaNEacyjqLh7Fkf27wNm0&_nc_zt=24&_nc_ht=scontent.fmnl8-6.fna&_nc_gid=AxKJaN38VV9uSZJENCak_pg&oh=00_AYGBybQYTi5DSV2Bc4lx2hyeWPAnLI4qZoSTTYJV5xwM0A&oe=67D1ADDC" class="card-img-top" alt="Mbenj Azieh Delos Santos">
+                        <div class="card-body">
+                            <p class="card-text">Mbenj Azieh Delos Santos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="{{ asset('js/index.script.blade.js') }}"></script>
