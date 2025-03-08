@@ -16,6 +16,20 @@ body {
     background-color: white;
 }
 
+/* Remove Scrollbar */
+html {
+    -ms-overflow-style: none !important;  /* IE and Edge */
+    scrollbar-width: none !important;     /* Firefox */
+    overflow-y: scroll;
+}
+
+html::-webkit-scrollbar {
+    display: none !important;  /* Chrome, Safari and Opera */
+    width: 0 !important;
+}
+
+/* Nav Bar + Functions */
+
 nav .wrapper {
     position: absolute;
     top: 0;
