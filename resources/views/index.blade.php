@@ -175,7 +175,7 @@
         <div class="aboutus-content" style="width: 60%; margin: 50px auto 0;">
             <h1 class="text-center mb-4" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200" style="font-weight: bold">Why this Recipe Web?</h1>
             <p data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400" style="color: black; font-size: 1.4rem; text-align: center; font-weight: 300">
-                This innovative web application is developed by Computer Science students from COM242 from National University Dasmariñas. 
+                This innovative web application is developed by COM242 students from National University Dasmariñas. 
                 Our mission is to revolutionize home cooking by providing an intelligent recipe recommendation system that helps users 
                 discover Filipino dishes based on their available ingredients.
                 <br><br>
