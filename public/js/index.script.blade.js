@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 searchInput.value = result.title || result.name;
                 searchSuggestions.style.display = 'none';
                 // Navigate to recipe page, will update soon
-                window.location.href = `/recipe/${result.id}`;
+                window.location.href = `/recipe/${result.slug}`;
             });
 
             searchSuggestions.appendChild(div);

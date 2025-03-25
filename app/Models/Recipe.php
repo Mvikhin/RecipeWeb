@@ -14,7 +14,14 @@ class Recipe extends Model
     protected $fillable = [
         'name',
         'title',
+        'slug',
         'description',
         'added_date'
     ];
+
+    // Relationship: A recipe has many steps
+    public function steps()
+    {
+        return $this->hasMany(RecipeStep::class)->orderBy('step_number');
+    }
 }
